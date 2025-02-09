@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.util.Random;
+import java.util.Scanner; //reads and stores user input
+import java.util.Random; //generates random numbers, used for the computer to choose its random move
 
 public class TicTacToe {
     private static char[][] board = {
@@ -68,12 +68,13 @@ public class TicTacToe {
     }
     
     private static void printBoard() {
+        //prints a 3 x 3 grid in the terminal, loops run until 3 x 3 is achieved
         System.out.println("  1 2 3");
         for (int i = 0; i < 3; i++) {
             System.out.print((i + 1) + " ");
             for (int j = 0; j < 3; j++) {
                 System.out.print(board[i][j]);
-                if (j < 2) System.out.print("|");
+                if (j < 2) System.out.print("|"); //draws the lines in between empty spaces
             }
             System.out.println();
             if (i < 2) System.out.println("  -----");
